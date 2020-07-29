@@ -64,9 +64,9 @@ void load_data(std::string path, Mat& set, Mat& labels){
                 if (file_name->d_name[0] != '.') {
                     std::string file_path = class_path + '/' + std::string(file_name->d_name);
                     Mat img = imread(file_path);
-                    resize(img, img, Size(25, 25));
+		    resize(img, img, Size(25, 25));
                     cvtColor(img, img, COLOR_BGR2GRAY);
-                    threshold(img, img, 100, 255, THRESH_OTSU);
+		    threshold(img, img, 100, 255, THRESH_OTSU);
                     Mat vector = img.reshape(1,1);
                     set.push_back(vector);
                     labels.push_back(atoi(class_name->d_name));
@@ -116,7 +116,6 @@ void SVM_train(){
 
 void prediction(std::string img_path, std::string model_path){
     Ptr<SVM> svm = SVM::load(model_path);
-
     Mat img = imread(img_path);
     resize(img, img, Size(25, 25));
     cvtColor(img, img, COLOR_BGR2GRAY);

@@ -1,3 +1,0 @@
-/home/zououming/RM-svm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/zououming/RM-svm/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/zououming/RM-svm/cmake-build-debug/CMakeFiles/RM_svm.dir
